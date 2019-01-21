@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+th, td {
+  padding: 15px;
+}
+.collapsible {
+    background-color: hsla(216, 100%, 65%,0.5);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: hsla(216, 100%, 40%,0.7)
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: hsla(0, 0%, 95%,0.7);
+
+}
+</style>
+</head>
+<body background="background2.png">
+
+<center><h2><font color="white">Welcome! You're just a few steps away from making your place in the biggest professional network ever!</font></h2></center><br><br>
+<form action="form.php" method="POST">
+Name:<input type="text" name="name" id="name" font color="white"><br><br>
+Email Id: <input type="email" name="email" id="email" font color="white" placeholder="xyz@abc.com"><br><br>
+Password: <input type="password" name="pwd" id="pwd" font color="white"><br><br>
+Job Title: <input type="text" name="jobtitle" id="jobtitle" font color="white" placeholder="Works at ABC"><br><br>
+
+<button type="button" class="collapsible">Education</button>
+<div class="content">
+<br>Degree: <input type="text" id="degree" name="degree" placeholder="Ex: Bachelor's"><br><br>
+Name of Institution: <input type="text" name="college_name" id="college_name"><br><br>
+</div>
+
+<button type="button" class="collapsible">Work Experience</button>
+<div class="content">
+<br> Position: <input type="text" id="pos"  placeholder="Ex: Manager"><br><br>
+Company: <input type="text" id="company_name" name="company_name"><br><br>
+From: <input type="date" id="we_from"><br><br>
+To: <input type="date" id="we_to"><br><br>
+</div>
+
+<button type="button" class="collapsible">Skills</button>
+<div class="content">
+<table>
+<tr><td><br>Skill 1: <input type="text" id="skill1" name="skill1" ><br><br><br></td>
+<td><br>Self-Rating for Skill 1: <input type="range" class="slider" min=0 max=10 step=1 id="srate1" name="srate1" ><br><br>
+Value: <span id="demo1"></span><br><br></td></tr>
+
+<tr><td><br>Skill 2: <input type="text" id="skill2" name="skill2" ><br><br><br></td>
+<td><br>Self-Rating for Skill 2: <input type="range" class="slider" min=0 max=10 step=1 id="srate2" name="srate2" ><br><br>
+Value: <span id="demo2"></span><br><br></td></tr>
+
+<tr><td><br>Skill 3: <input type="text" id="skill3" name="skill3" ><br><br><br></td>
+<td><br>Self-Rating for Skill 3: <input type="range" class="slider" min=0 max=10 step=1 id="srate3" name="srate3" ><br><br>
+Value: <span id="demo3"></span><br><br></td></tr>
+
+<tr><td><br>Skill 4: <input type="text" id="skill4" name="skill4" ><br><br><br></td>
+<td><br>Self-Rating for Skill 4: <input type="range" class="slider" min=0 max=10 step=1 id="srate4" name="srate4" ><br><br>
+Value: <span id="demo4"></span><br><br></td></tr>
+
+<tr><td><br>Skill 5: <input type="text" id="skill5" name="skill5" ><br><br><br></td>
+<td><br>Self-Rating for Skill 5: <input type="range" class="slider" min=0 max=10 step=1 id="srate5" name="srate5" ><br><br>
+Value: <span id="demo5"></span><br><br></td></tr>
+</table>
+</div>
+
+<input type="submit" name="submit" id="submit" value="Submit"><br>
+</form>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+
+<script>
+var slider1 = document.getElementById("srate1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("srate2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+
+var slider3 = document.getElementById("srate3");
+var output3 = document.getElementById("demo3");
+output3.innerHTML = slider3.value;
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+
+var slider4 = document.getElementById("srate4");
+var output4 = document.getElementById("demo4");
+output4.innerHTML = slider4.value;
+slider4.oninput = function() {
+  output4.innerHTML = this.value;
+}
+
+var slider5 = document.getElementById("srate5");
+var output5 = document.getElementById("demo5");
+output5.innerHTML = slider5.value;
+slider5.oninput = function() {
+  output5.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>

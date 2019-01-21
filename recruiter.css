@@ -1,0 +1,46 @@
+h1{
+	margin:40px 30px;
+	font-family:;
+	
+}
+div{
+	margin-top:40px;
+
+}
+label{
+	margin-left:40px;
+	font-size:24px;
+	color:white;
+	
+}
+button{
+margin:40px 250px;
+font-size:24px;
+padding: 5px;
+}
+input{
+	
+color:Cornsilk;
+font-size:20px;
+}
+body{
+	background-image:url("background2.png");
+	height: 100%; 
+	background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+	text-align:center;
+}
+
+#submit{
+	color:green;
+}
+.button{
+	color:green;
+	font:size:20px;
+
+}
+a{
+	color:green;
+	font:size:20px;
+}
